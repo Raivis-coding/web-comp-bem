@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Comp and BEM</title>
+    <link rel="stylesheet" href="web.comp.bem.css">
+    <script src="web_comp_bem.js" defer></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="logo">
+            <a href="#"><h3>☰ 📬 Mail App</h3></a>
+        </div>
+        <ul class="nav_bar">
+            <div class="button_compose">
+                <a href="#">
+                    <span class="compose_name"><slot slot="icon">✏️</slot> Compose</span>
+                </a>
+            </div>
+            <li><a href="#" class="nav_bar_label"><app-sidebar-button text="Inbox">
+                <slot slot="icon">📥</slot>
+            </app-sidebar-button><span class="nav_bar_name"><b>Inbox</b></span></a></li>
+            <li><a href="#" class="nav_bar_label"><app-sidebar-button text="Starred">
+                <slot slot="icon">⭐️</slot>
+            </app-sidebar-button><span class="nav_bar_name">Starred</span></a></li>
+            <li><a href="#" class="nav_bar_label"><app-sidebar-button text="Snoozed">
+                <slot slot="icon">⏱</slot>
+            </app-sidebar-button><span class="nav_bar_name">Snoozed</span></a></li>
+            <li><a href="#" class="nav_bar_label"><app-sidebar-button text="Sent">
+                <slot slot="icon">➡️</slot>
+            </app-sidebar-button><span class="nav_bar_name">Sent</span></a></li>
+            <li><a href="#" class="nav_bar_label"><app-sidebar-button text="Draft" unreadCount="1">
+                <slot slot="icon">📄</slot>
+            </app-sidebar-button><span class="nav_bar_name"><b>Drafts</b></span></a></li>
+        </ul>
+    </div>
+    <app-sidebar-button>
+        <button slot="icon">Hey</button>
+    </app-sidebar-button>
+</body>
+</html>
